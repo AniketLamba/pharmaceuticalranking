@@ -1,0 +1,252 @@
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-5"> 
+	<title>Calculator for Lamba</title>
+<style>
+#hah {
+	display: none; 
+}
+.exp {
+	display: none;
+}
+
+
+</style>
+
+</head>
+<body>
+		<input type="button" value="WCSI" onclick="displayWCSI()">
+		<input type="button" value="RQ" onclick="displayRQ()">
+		<input type="button" value="toxicload" onclick="displaytoxicload()">
+		<input type="button" value="Clear" onclick="ClearAll()">
+	<br>
+	<form id="hah" name="formcalc" class="displaynow">
+		Ethinyl Estradiol: <br>
+		<div class="chem1 disp">Input</div> <input type="double" name="inum1"> <div class="chem2 disp">Output</div> <input class="inp2" type="double" name="onum1"><br>
+		Estradiol: <br>
+		<div class="chem1 disp">Input</div> <input type="double" name="inum2"> <div class="chem2 disp">Output</div> <input class="inp2" type="double" name="onum2"><br>
+		Diclofenac:  <br>
+		<div class="chem1 disp">Input</div> <input type="double" name="inum3"> <div class="chem2 disp">Output</div> <input class="inp2" type="double" name="onum3"><br>
+		Permethrin:  <br>
+		<div class="chem1 disp">Input</div> <input type="double" name="inum4"> <div class="chem2 disp">Output</div> <input class="inp2" class="inp2" type="double" name="onum4"><br>
+		Ibuprofen:  <br>
+		<div class="chem1 disp">Input</div> <input type="double" name="inum5"> <div class="chem2 disp">Output</div> <input class="inp2" type="double" name="onum5"><br>
+		Atenolol:  <br>
+		<div class="chem1 disp">Input</div> <input type="double" name="inum6"> <div class="chem2 disp">Output</div> <input class="inp2" type="double" name="onum6"><br>
+		Ethinyl  Estradiol : <div class="res" id="res1"></div><br>
+		Estradiol  : <div class="res" id="res2"></div><br>
+		Diclofenac  : <div class="res" id="res3"></div><br>
+		Permethrin  : <div class="res" id="res4"></div><br>
+		Ibuprofen  : <div class="res" id="res5"></div><br>
+		Atenolol  : <div class="res" id="res6"></div><br>
+		<input type="button" id="wcsi" value="WCSI" onclick="WCSI()">
+		<input type="button" id="rq" value="RQ" onclick="RQ()">
+		<input type="button" id="toxil" value="toxicload" onclick="toxicload()">
+	</form>
+		<div id="type1" class="exp">Cin and Cout are concentrations of a compound entering and exiting waste water treatment plant.</div>
+		<div id="type2" class="exp">Amount used is in (kg/yr) </div>
+		<div id="type3" class="exp">Toxic mass is mass of compound prescribed per year in (kg/year).</div>
+		<script type="text/javascript">
+
+		function WCSI() {
+			// body...
+			var num11,num12,num21,num22,num31,num32,num41,num42,num51,num52,num61,num62,re1,re2,re3,re4,re5,re6;
+			num11=Number(document.formcalc.inum1.value);
+			num12=Number(document.formcalc.onum1.value);
+			re1=(num11*num12)/(num11-num12);
+			document.getElementById('res1').innerHTML =re1;
+
+			num21=Number(document.formcalc.inum2.value);
+			num22=Number(document.formcalc.onum2.value);
+			re2=(num21*num22)/(num21-num22);
+			document.getElementById('res2').innerHTML =re2;
+
+			num31=Number(document.formcalc.inum3.value);
+			num32=Number(document.formcalc.onum3.value);
+			re3=(num31*num32)/(num31-num32);
+			document.getElementById('res3').innerHTML =re3;
+
+			num41=Number(document.formcalc.inum4.value);
+			num42=Number(document.formcalc.onum4.value);
+			re4=(num41*num42)/(num41-num42);
+			document.getElementById('res4').innerHTML =re4;
+
+			num51=Number(document.formcalc.inum5.value);
+			num52=Number(document.formcalc.onum5.value);
+			re5=(num51*num52)/(num51-num52);
+			document.getElementById('res5').innerHTML =re5;
+
+			num61=Number(document.formcalc.inum6.value);
+			num62=Number(document.formcalc.onum6.value);
+			re6=(num61*num62)/(num61-num62);
+			document.getElementById('res6').innerHTML =re6;
+
+		}
+		function RQ() {
+			// body...
+			var num11,num12,num21,num22,num31,num32,num41,num42,num51,num52,num61,num62,re1,re2,re3,re4,re5,re6;
+			num11=Number(document.formcalc.inum1.value);
+			num12=Number(document.formcalc.onum1.value);
+			re1=13698.63*(num11)/(0.00005*num12);
+			document.getElementById('res1').innerHTML =re1;
+
+			num21=Number(document.formcalc.inum2.value);
+			num22=Number(document.formcalc.onum2.value);
+			re2=13698.63*(num21)/(0.00167*num12);
+			document.getElementById('res2').innerHTML =re2;
+
+			num31=Number(document.formcalc.inum3.value);
+			num32=Number(document.formcalc.onum3.value);
+			re3=13698.63*(num31)/(9.8*num32);
+			document.getElementById('res3').innerHTML =re3;
+
+			num41=Number(document.formcalc.inum4.value);
+			num42=Number(document.formcalc.onum4.value);
+			re4=13698.63*(num41)/(0.0038*num42);
+			document.getElementById('res4').innerHTML =re4;
+
+			num51=Number(document.formcalc.inum5.value);
+			num52=Number(document.formcalc.onum5.value);
+			re5=13698.63*(num51)/(7.05*num52);
+			document.getElementById('res5').innerHTML =re5;
+
+			num61=Number(document.formcalc.inum6.value);
+			num62=Number(document.formcalc.onum6.value);
+			re6=13698.63*(num61*num62)/(40*num62);
+			document.getElementById('res6').innerHTML =re6;
+		}
+
+		function toxicload() {
+			// body...
+			var num11,num12,num21,num22,num31,num32,num41,num42,num51,num52,num61,num62,re1,re2,re3,re4,re5,re6;
+			num11=Number(document.formcalc.inum1.value);
+			re1=0.6*(num11)/(1.2);
+			document.getElementById('res1').innerHTML =re1;
+
+
+			num21=Number(document.formcalc.inum2.value);
+			num22=Number(document.formcalc.onum2.value);
+			re2=0.6*(num21)/(3.5);
+			document.getElementById('res2').innerHTML =re2;
+
+			num31=Number(document.formcalc.inum3.value);
+			num32=Number(document.formcalc.onum3.value);
+			re3=0.6*(num31)/(20);
+			document.getElementById('res3').innerHTML =re3;
+
+			num41=Number(document.formcalc.inum4.value);
+			num42=Number(document.formcalc.onum4.value);
+			re4=0.6*(num41)/(0.00036);
+			document.getElementById('res4').innerHTML =re4;
+
+			num51=Number(document.formcalc.inum5.value);
+			num52=Number(document.formcalc.onum5.value);
+			re5=0.6*(num51)/(16.37);
+			document.getElementById('res5').innerHTML =re5;
+
+			num61=Number(document.formcalc.inum6.value);
+			num62=Number(document.formcalc.onum6.value);
+			re6=0.6*(num61)/(1300);
+			document.getElementById('res6').innerHTML =re6;
+		}		
+		function displayWCSI() {
+
+			var elements = document.getElementsByClassName('chem1');
+
+		    for(var i = 0, length = elements.length; i < length; i++) {
+		       elements[i].innerHTML = 'Cin';
+		       elements[i].style.display = 'inline';
+			}
+			var elements = document.getElementsByClassName('chem2');
+
+		    for(var i = 0, length = elements.length; i < length; i++) {
+		       elements[i].innerHTML = 'Cout';
+		       elements[i].style.display = 'inline';
+			}			
+			var elements = document.getElementsByClassName('inp2');
+
+		    for(var i = 0, length = elements.length; i < length; i++) {
+		       elements[i].style.display = 'inline';
+			}						
+			document.getElementById('hah').style.display = 'inline';
+			document.getElementById('toxil').style.display='none';
+			document.getElementById('rq').style.display='none';
+			document.getElementById('wcsi').style.display='inline';
+			document.getElementById('type1').style.display='block';
+			document.getElementById('type2').style.display='none';
+			document.getElementById('type3').style.display='none';
+		}
+		function displayRQ() {
+
+			
+			var elements = document.getElementsByClassName('chem1');
+
+		    for(var i = 0, length = elements.length; i < length; i++) {
+		       elements[i].innerHTML = 'Amount used';
+		       elements[i].style.display = 'inline';
+			}
+			var elements = document.getElementsByClassName('chem2');
+
+		    for(var i = 0, length = elements.length; i < length; i++) {
+		       elements[i].innerHTML = 'Number of Inhabitants';
+		       elements[i].style.display = 'inline';
+			}			
+			var elements = document.getElementsByClassName('inp2');
+
+		    for(var i = 0, length = elements.length; i < length; i++) {
+		       // elements[i].innerHTML = 'Cout';
+		       elements[i].style.display = 'inline';
+			}			
+			document.getElementById('hah').style.display = 'inline';
+			document.getElementById('type1').style.display='none';
+			document.getElementById('type2').style.display='block';
+			document.getElementById('type3').style.display='none';		
+			document.getElementById('toxil').style.display='none';
+			document.getElementById('wcsi').style.display='none';			
+			document.getElementById('rq').style.display='inline';
+		}
+		function displaytoxicload() {
+
+			
+			var elements = document.getElementsByClassName('chem1');
+
+		    for(var i = 0, length = elements.length; i < length; i++) {
+		       elements[i].innerHTML = 'Toxic Mass of Compounds';
+		       elements[i].style.display = 'inline';
+			}
+			var elements = document.getElementsByClassName('chem2');
+
+		    for(var i = 0, length = elements.length; i < length; i++) {
+		       // elements[i].innerHTML = 'Cout';
+		       elements[i].style.display = 'none';
+			}			
+
+			var elements = document.getElementsByClassName('inp2');
+
+		    for(var i = 0, length = elements.length; i < length; i++) {
+		       // elements[i].innerHTML = 'Cout';
+		       elements[i].style.display = 'none';
+			}			
+			document.getElementById('hah').style.display = 'inline';
+			document.getElementById('type1').style.display='none';
+			document.getElementById('type2').style.display='none';
+			document.getElementById('type3').style.display='block';
+			document.getElementById('wcsi').style.display='none';
+			document.getElementById('rq').style.display='none';
+			document.getElementById('toxil').style.display='inline';
+		}
+		function ClearAll() {
+			var elements = document.getElementById('hah');
+			elements.style.display='none';
+			document.getElementById('type1').style.display='none';
+			document.getElementById('type2').style.display='none';
+			document.getElementById('type3').style.display='none';
+			document.getElementById('toxil').style.display='none';
+			document.getElementById('rq').style.display='none';
+			document.getElementById('wcsi').style.display='none';
+		}
+
+	
+</script>
+</body>
+</html>
